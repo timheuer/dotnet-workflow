@@ -45,4 +45,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: packaged-template
-        path: ./published
+        path: ./package
