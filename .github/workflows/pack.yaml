@@ -68,4 +68,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: packaged-template
-        path: ${{ env.PACKAGE_PATH }}
+        path: ./src/package
