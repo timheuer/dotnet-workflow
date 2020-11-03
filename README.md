@@ -1,3 +1,5 @@
+![Build](https://github.com/timheuer/dotnet-workflow/workflows/Build/badge.svg)
+
 # `dotnet new workflow`
 This is a simple global tool to give you a handy and quick method to create a GitHub Actions workflow file for continous integration (CI) builds.
 
