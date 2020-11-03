@@ -19,7 +19,7 @@ on:
 jobs:
   dotnet_workflow:
     if: github.event_name == 'push' && contains(toJson(github.event.commits), '***NO_CI***') == false && contains(toJson(github.event.commits), '[ci skip]') == false && contains(toJson(github.event.commits), '[skip ci]') == false
-    name: Build 
+    name: Pack 
     runs-on: ubuntu-latest
     env:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
@@ -38,4 +38,11 @@ jobs:
         dotnet-version: 3.1.x
 
     - name: Pack
-      run: dotnet pack
+      working-directory: src
+      run: dotnet pack -o ./package
+
+    - name: Publish artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: packaged-template
+        path: ./published
