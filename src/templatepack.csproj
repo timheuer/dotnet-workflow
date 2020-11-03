@@ -2,12 +2,13 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <PackageId>TimHeuer.GitHubActions.Templates</PackageId>
     <Title>.NET Core Workflow Templates</Title>
     <Authors>Tim Heuer</Authors>
     <Description>Template for creating a GitHub Action workflow for CI for .NET Core</Description>
     <PackageTags>dotnet-new;templates;github;actions;devops;workflow</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <TargetFramework>netstandard2.0</TargetFramework>
 
@@ -20,5 +21,12 @@
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
+
+  <ItemGroup>
+	  <None Include="icon.png">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
+	</ItemGroup>
 
 </Project>
