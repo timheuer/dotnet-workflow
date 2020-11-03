@@ -1,8 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.2</PackageVersion>
     <PackageId>TimHeuer.GitHubActions.Templates</PackageId>
     <Title>.NET Core Workflow Templates</Title>
     <Authors>Tim Heuer</Authors>
@@ -11,10 +10,13 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <TargetFramework>netstandard2.0</TargetFramework>
-
+    <PackageProjectUrl>https://github.com/timheuer/dotnet-workflow</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/timheuer/dotnet-workflow</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
