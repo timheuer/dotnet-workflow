@@ -17,7 +17,7 @@ on:
       - '**/*.gitattributes'
 
 env:
-  PACKAGE_PATH: ./package
+  PACKAGE_PATH: './package'
       
 jobs:
   dotnet_workflow:
@@ -68,4 +68,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: packaged-template
-        path: ${{ env. PACKAGE_PATH }}
+        path: ${{ env.PACKAGE_PATH }}
