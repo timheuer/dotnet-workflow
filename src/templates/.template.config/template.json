@@ -6,7 +6,7 @@
     "name": "GitHub Actions workflow for .NET Core",
     "description": "A workflow file for .NET Core apps to use in GitHub Actions",
     "shortName": "workflow",
-    "sourceName": "build",
+    "sourceName": "ci_build",
     "primaryOutputs": [
         {
             "path": ".github/workflows/build.yaml"
