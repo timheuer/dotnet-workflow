@@ -15,6 +15,9 @@ on:
       - '**/*.md'
       - '**/*.gitignore'
       - '**/*.gitattributes'
+
+env:
+  PACKAGE_PATH: ./package
       
 jobs:
   dotnet_workflow:
@@ -39,10 +42,30 @@ jobs:
 
     - name: Pack
       working-directory: src
-      run: dotnet pack -o ./package
+      run: dotnet pack -o ${{ env.PACKAGE_PATH }}
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+      with:
+        nuget-api-key: ${{ secrets.NUGET_KEY }}
+        nuget-version: latest
+
+    - name: Get certificate
+      id: cert_file
+      uses: timheuer/base64-to-file@master
+      with:
+          fileName: 'certfile.pfx'
+          encodedString: ${{ secrets.SIGNING_CERT }}
+
+    # Sign the package
+    - name: Sign NuGet Package
+      run: nuget sign "**/*.nupkg" -CertificatePath ${{ steps.cert_file.outputs.filePath }} -CertificatePassword "${{ secrets.CERT_PWD }}" -Timestamper http://timestamp.digicert.com -NonInteractive
+
+    - name: Publish NuGet package
+      run: dotnet nuget push "**/*.nupkg" -k ${{ secrets.NUGET_KEY }} -s https://api.nuget.org/v3/index.json
 
     - name: Publish artifact
       uses: actions/upload-artifact@master
       with:
         name: packaged-template
-        path: ./package
+        path: ${{ env. PACKAGE_PATH }}
