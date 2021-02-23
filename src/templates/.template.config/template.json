@@ -22,7 +22,7 @@
             "description": "The SDK version for the generated workflow",
             "replaces": "Workflow.SDKVersion",
             "type": "parameter",
-            "defaultValue": "3.1.x"
+            "defaultValue": "5.0.x"
         },
         "branch" :{
             "description": "The branch for the workflow to operate on",
