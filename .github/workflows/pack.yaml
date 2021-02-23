@@ -45,7 +45,7 @@ jobs:
       run: dotnet pack -o ${{ env.PACKAGE_PATH }}
 
     - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
+      uses: NuGet/setup-nuget@v1.0.5
       with:
         nuget-api-key: ${{ secrets.NUGET_KEY }}
         nuget-version: latest
