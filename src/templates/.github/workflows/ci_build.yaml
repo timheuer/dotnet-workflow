@@ -8,6 +8,13 @@ on:
       - '**/*.md'
       - '**/*.gitignore'
       - '**/*.gitattributes'
+  pull_request:
+    branches:
+      - Workflow.Branch
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.gitignore'
+      - '**/*.gitattributes'
   workflow_dispatch:
     branches:
       - Workflow.Branch
