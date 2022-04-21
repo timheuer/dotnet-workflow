@@ -30,14 +30,16 @@ jobs:
       DOTNET_GENERATE_ASPNET_CERTIFICATE: false
       DOTNET_ADD_GLOBAL_TOOLS_TO_PATH: false
       DOTNET_MULTILEVEL_LOOKUP: 0
+      DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: true
+      TERM: xterm
 
     steps:
     - uses: actions/checkout@v2
       
     - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.8.1
+      uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 3.1.x
+        dotnet-version: 6.0.x
 
     - name: Pack
       working-directory: src
