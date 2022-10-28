@@ -7,7 +7,7 @@
       }
     },
     "usageExamples": [
-      "--sdk-version 6.0.302",
+      "--sdk-version 6.0.402",
       "-sdk 6.0.x",
       "-sdk 6.0.x -n build"
     ]
