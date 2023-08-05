@@ -1,7 +1,12 @@
 {
     "$schema": "http://json.schemastore.org/template",
     "author": "Tim Heuer",
-    "classifications": [ "Config","Common", "Code", "Web" ],
+    "classifications": [
+        "Config",
+        "Common",
+        "Code",
+        "Web"
+    ],
     "identity": "TimHeuer.GitHubWorkflows",
     "name": "GitHub Actions workflow for .NET Core",
     "description": "A workflow file for .NET Core apps to use in GitHub Actions",
@@ -13,22 +18,22 @@
         }
     ],
     "tags": {
-      "language": "YAML",
-      "type": "item"
+        "language": "YAML",
+        "type": "item"
     },
     "defaultName": "build",
     "symbols": {
-        "sdk-version" :{
+        "sdk-version": {
             "description": "The SDK version for the generated workflow",
             "replaces": "Workflow.SDKVersion",
             "type": "parameter",
             "defaultValue": "7.0.x"
         },
-        "branch" :{
+        "branch": {
             "description": "The branch for the workflow to operate on",
             "replaces": "Workflow.Branch",
             "type": "parameter",
             "defaultValue": "main"
         }
     }
-  }
+}

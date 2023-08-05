@@ -16,12 +16,6 @@ on:
       - '**/*.gitignore'
       - '**/*.gitattributes'
   workflow_dispatch:
-    branches:
-      - Workflow.Branch
-    paths-ignore:
-      - '**/*.md'
-      - '**/*.gitignore'
-      - '**/*.gitattributes'
       
 jobs:
   build:
