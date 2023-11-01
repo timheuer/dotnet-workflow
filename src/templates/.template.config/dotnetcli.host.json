@@ -4,6 +4,9 @@
     "sdk-version": {
       "longName": "sdk-version",
       "shortName": "sdk"
+    },
+    "dotnet-cli-version": {
+      "isHidden": "true"
     }
   },
   "usageExamples": [
