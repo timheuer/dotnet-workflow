@@ -3,9 +3,9 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <PackageId>TimHeuer.GitHubActions.Templates</PackageId>
-    <Title>.NET Core Workflow Templates</Title>
+    <Title>.NET Workflow Templates</Title>
     <Authors>Tim Heuer</Authors>
-    <Description>Template for creating a GitHub Action workflow for CI for .NET Core</Description>
+    <Description>Template for creating a GitHub Action workflow for CI for .NET</Description>
     <PackageTags>dotnet-new;templates;github;actions;devops;workflow</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -16,7 +16,7 @@
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
-    <Version>1.1.7</Version>
+    <Version>1.1.8</Version>
   </PropertyGroup>
 
   <ItemGroup>

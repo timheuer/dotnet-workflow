@@ -8,9 +8,9 @@
         "Web"
     ],
     "identity": "TimHeuer.GitHubWorkflows",
-    "name": "GitHub Actions workflow for .NET Core",
+    "name": "GitHub Actions workflow for .NET",
     "generatorVersions": "[1.0.0.0-*)",
-    "description": "A workflow file for .NET Core apps to use in GitHub Actions",
+    "description": "A workflow file for .NET apps to use in GitHub Actions",
     "shortName": "workflow",
     "sourceName": "ci_build",
     "primaryOutputs": [

@@ -10,8 +10,8 @@
     }
   },
   "usageExamples": [
-    "--sdk-version 7.0.402",
-    "-sdk 7.0.x",
-    "-sdk 7.0.x -n build"
+    "--sdk-version 8.0.100",
+    "-sdk 8.0.x",
+    "-sdk 8.0.x -n build"
   ]
 }
