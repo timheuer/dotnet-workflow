@@ -35,9 +35,13 @@ jobs:
     - uses: actions/checkout@v4
       
     - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: Workflow.SDKVersion
+
+    # if not using any workloads (e.g, Aspire, Wasm, Maui), remove this step
+    - name: Restore workloads
+      run: dotnet workload restore
 
     - name: Restore
       run: dotnet restore
